@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Exam Readiness Analyzer</title>
+    <title>College Bus Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>📚 Exam Readiness Analyzer</h1>
+<h1>🚌 College Bus Tracker</h1>
 
-    <input type="number" id="syllabus" placeholder="Syllabus completed (%)">
-    <input type="number" id="hours" placeholder="Study hours per day">
-    <input type="number" id="days" placeholder="Days left for exam">
-
-    <button onclick="analyze()">Check Readiness</button>
-
-    <p id="result"></p>
+<div class="toggle">
+    <button onclick="showBuses('morning')">Morning</button>
+    <button onclick="showBuses('evening')">Evening</button>
 </div>
+
+<input type="text" id="search" placeholder="Search bus..." onkeyup="searchBus()">
+
+<div id="busList" class="bus-container"></div>
+
+<div id="busDetails" class="details hidden"></div>
 
 <script src="script.js"></script>
 </body>
